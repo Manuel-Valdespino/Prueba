@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Repeated Word Counter</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">AI Lab 2 Session 2</p>
+        <h1>PDF Repeated Word Counter</h1>
+        <p class="hero-copy">
+          A lightweight workflow app that turns a repeated manual task into a reusable local tool.
+        </p>
+      </header>
+
+      <section class="card workflow-card" aria-labelledby="workflow-title">
+        <div class="section-heading">
+          <h2 id="workflow-title">Workflow</h2>
+          <p>Follow the steps from upload to export.</p>
+        </div>
+        <ol class="workflow-steps">
+          <li><span>1</span> Upload PDF</li>
+          <li><span>2</span> Extract text</li>
+          <li><span>3</span> Count repeated words</li>
+          <li><span>4</span> Review table</li>
+          <li><span>5</span> Download CSV</li>
+        </ol>
+      </section>
+
+      <section class="card control-card" aria-labelledby="analysis-title">
+        <div class="section-heading">
+          <h2 id="analysis-title">Run the workflow</h2>
+          <p>Use a local PDF file to generate repeated-word counts.</p>
+        </div>
+
+        <div class="control-grid">
+          <label class="upload-field" for="pdfFile">
+            <span class="upload-label">Select a PDF</span>
+            <input id="pdfFile" name="pdfFile" type="file" accept="application/pdf" />
+          </label>
+
+          <div class="button-row">
+            <button id="analyzeButton" type="button" disabled>Run analysis</button>
+            <button id="downloadButton" type="button" disabled>Download CSV</button>
+          </div>
+        </div>
+
+        <div class="status-panel" aria-live="polite">
+          <span class="status-pill" id="statusBadge">Waiting for upload</span>
+          <p id="statusMessage">Upload a text-based PDF to begin.</p>
+          <p class="sample-note">
+            Sample file available at
+            <code>samples/sample_repeated_words.pdf</code>
+          </p>
+        </div>
+      </section>
+
+      <section class="card results-card" aria-labelledby="results-title">
+        <div class="section-heading">
+          <h2 id="results-title">Repeated words</h2>
+          <p id="resultsSummary">No analysis has been run yet.</p>
+        </div>
+
+        <div class="table-shell">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Word</th>
+                <th scope="col">Count</th>
+              </tr>
+            </thead>
+            <tbody id="resultsTableBody">
+              <tr>
+                <td colspan="2" class="empty-state">Results will appear here after analysis.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

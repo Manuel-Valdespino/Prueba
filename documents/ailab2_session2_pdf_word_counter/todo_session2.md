@@ -11,7 +11,13 @@
 - [x] Tested the full browser flow with `samples/sample_repeated_words.pdf`.
 - [x] Confirmed expected repeated words appeared in the table, including `control=3` and repeated two-count words.
 - [x] Confirmed the downloaded CSV used the `word,count` header and matched the on-screen results.
+- [x] Added a CSV Viewer section that uploads, parses, previews, filters, and exports visible CSV rows.
+- [x] Displayed CSV row count, column count, and column names in the UI.
+- [x] Added clear CSV error handling for empty files and malformed row structures.
+- [x] Validated the original PDF workflow still works after adding the CSV Viewer.
+- [x] Validated CSV upload, preview, filtering, and filtered CSV download behavior.
 
 ## Known limitations
 - Text extraction is reliable for text-based PDFs, but not for scanned PDFs without OCR.
 - The browser must allow file selection and downloads for the CSV export step.
+- The CSV Viewer treats the first non-empty row as the header row and expects consistent column counts across the file.

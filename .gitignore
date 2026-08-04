@@ -1,0 +1,30 @@
+# Archivos de entorno con credenciales sensibles
+.env
+
+# Credenciales y configuración local
+*.key
+*.pem
+*.p12
+secrets/
+credentials/
+
+# IDEs
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Dependencias (si agregas código Python más adelante)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+ENV/

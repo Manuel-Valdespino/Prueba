@@ -2,7 +2,7 @@
   "mcpServers": {
     "databricks-native": {
       "type": "streamable-http",
-      "url": "https://<TU_WORKSPACE_HOSTNAME>/api/2.0/mcp/functions/{CATALOG_NAME}/{SCHEMA_NAME}",
+      "url": "https://dbc-185110ea-a5be.cloud.databricks.com/api/2.0/mcp/functions/risk_analyst/lfp",
       "headers": {
         "Authorization": "Bearer <TU_PERSONAL_ACCESS_TOKEN>"
       },

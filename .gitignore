@@ -1,5 +1,6 @@
 # Archivos de entorno con credenciales sensibles
 .env
+CONFIGURAR_TOKEN_AQUI.md
 
 # Credenciales y configuración local
 *.key
